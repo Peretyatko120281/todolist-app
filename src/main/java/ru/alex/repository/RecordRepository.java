@@ -7,6 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import ru.alex.entity.Record;
 import ru.alex.entity.RecordStatus;
+import ru.alex.entity.User;
 
 import java.util.List;
 
@@ -18,5 +19,10 @@ public interface RecordRepository extends JpaRepository<Record,Integer> {
     void update(int id, @Param("status") RecordStatus newStatus);
 
 
+    List<Record> findAllByUser(User testUser);
 
+    List<Record> findActiveByUser(User testUser);
+
+    List<Record> findDoneByUser(User testUser);
+    long countByUserAndStatus(User user, RecordStatus status);
 }

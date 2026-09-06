@@ -17,6 +17,8 @@ public interface UserRepository extends JpaRepository<User,Integer> {
     List<User> findAllByRoleInOrderById(Iterable<UserRole> roles);
     Optional<User> findByEmailIgnoreCase(String email);
 
+    boolean existsByEmailIgnoreCase(String email);
+
     @Modifying
     @Query("UPDATE User SET role = :role WHERE id = :id")
     void updateRole(int id, @Param("role") UserRole newRole);

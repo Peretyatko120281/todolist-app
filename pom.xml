@@ -56,6 +56,24 @@
             <artifactId>thymeleaf-extras-springsecurity6</artifactId>
         </dependency>
 
+
+            <!-- ... остальные зависимости ... -->
+
+            <!-- Spring Security Test (для @WithMockUser) -->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-test</artifactId>
+                <scope>test</scope>
+            </dependency>
+
+            <!-- ... другие зависимости ... -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+
         <!--DB-->
         <dependency>
             <groupId>org.postgresql</groupId>

@@ -23,7 +23,7 @@ public class Record {
     private User user;
 
 
-    public Record() {
+    public Record(String s, RecordStatus active, User testUser) {
     }
 
     public Record(String title,User user) {
